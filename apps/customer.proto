@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package customer;
+
+service CustomerService {
+  rpc FindOne (CustomerId) returns (Customer);
+  rpc FindMany (stream CustomerId) returns (stream Customer);
+}
+
+message CustomerId {
+  string id = 1;
+}
+
+message Customer {
+  string id = 1;
+  string name = 2;
+}

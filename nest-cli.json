@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/materializedview/src",
+  "monorepo": true,
+  "root": "apps/materializedview",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/materializedview/tsconfig.app.json"
+  },
+  "projects": {
+    "materializedview": {
+      "type": "application",
+      "root": "apps/materializedview",
+      "entryFile": "main",
+      "sourceRoot": "apps/materializedview/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/materializedview/tsconfig.app.json"
+      }
+    },
+    "order-service": {
+      "type": "application",
+      "root": "apps/order-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/order-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/order-service/tsconfig.app.json"
+      }
+    },
+    "customer-service": {
+      "type": "application",
+      "root": "apps/customer-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/customer-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/customer-service/tsconfig.app.json"
+      }
+    }
+  }
+}
